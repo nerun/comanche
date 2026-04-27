@@ -1,0 +1,7 @@
+Options -Indexes
+
+DirectoryIndex index.php
+
+<FilesMatch "(^\.|\.htaccess|\.htpasswd|descriptions\.json$)">
+    Require all denied
+</FilesMatch>

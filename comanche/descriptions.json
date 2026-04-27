@@ -1,0 +1,6 @@
+{
+    "comanche":
+        "Comanche indexer configuration directory.\n\nThis directory is hidden and will not appear in the index.\n\nJSON uses the format \"key\":\"value\".\n- The key must be the full relative path from index.php.\n- Example: \"test/file.txt\":\"Description here\".\n\nRules:\n- Strings must use double quotes.\n- Escape quotes inside text with \\\".\n- Use \\n for line breaks.\n- Do not add a comma after the last entry.\n- Paths are case-sensitive and must match exactly.",
+    "index.php":
+        "Comanche indexer, also hidden. As this is the last entry, there is no trailing comma."
+}

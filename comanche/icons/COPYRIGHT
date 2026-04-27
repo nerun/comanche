@@ -1,0 +1,32 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: icons/* icons/unused/*
+Copyright: 2022 The Apache Software Foundation
+License: Apache-2.0
+
+Files: icons/custom/*
+Copyright: 2026 Daniel Dias Rodrigues
+License: Apache-2.0
+Comment:
+ These files are derived works based on original Apache HTTP Server icons
+ (notably generic.gif and related assets). Modifications include visual
+ redesign and adaptation for custom directory indexing purposes.
+
+Files: icons/custom/game.gif
+Copyright: 2026 Daniel Dias Rodrigues
+License: Apache-2.0
+Comment:
+ Independent creation, not derived from Apache upstream assets.
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+     http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
