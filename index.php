@@ -43,7 +43,8 @@ if (is_readable($descFile)) {
     }
 }
 
-function get_description($dir, $file, $descriptions) {
+function get_description($dir, $file, $descriptions)
+{
     $key = trim($dir . '/' . $file, '/');
 
     return $descriptions[$key] ?? '';
@@ -140,7 +141,8 @@ $iconsFolder = "comanche/icons";
             <tbody>
 <!-- --------------------------------------------------------------- -->
 <?php
-function human_filesize($bytes) {
+function human_filesize($bytes)
+{
     $sz = ' KMGTP';
     $factor = $bytes > 0 ? floor(log($bytes, 1024)) : 0;
     $value = $bytes / pow(1024, $factor);
@@ -149,7 +151,8 @@ function human_filesize($bytes) {
     return sprintf("%.{$decimals}f", $value) . $suffix;
 }
 
-function get_mtime($file) {
+function get_mtime($file)
+{
     if (is_dir($file)) {
         foreach (['index.php', 'index.html', 'index.htm'] as $idx) {
             $path = "$file/$idx";
@@ -164,11 +167,12 @@ function get_mtime($file) {
         : '-';
 }
 
-function get_icon($file, $isDir) {
+function get_icon($file, $isDir)
+{
     if ($isDir) {
         return 'folder.gif';
     }
-    
+
     $basename = basename($file);
     $name = strtolower($basename);
     $ext = pathinfo($name, PATHINFO_EXTENSION);
@@ -295,7 +299,7 @@ function get_icon($file, $isDir) {
         'vhd'   => 'diskimg.gif',
         'vhdx'  => 'diskimg.gif',
         'vmdk'  => 'diskimg.gif',
-        
+
         // font
         'ttf'   => 'custom/font.gif',
         'otf'   => 'custom/font.gif',
@@ -320,7 +324,7 @@ function get_icon($file, $isDir) {
         'exr'   => 'image2.gif',
         'gif'   => 'image2.gif',
         'gif87' => 'image2.gif',
-        'group4'=> 'image2.gif',
+        'group4' => 'image2.gif',
         'heic'  => 'image2.gif',
         'heif'  => 'image2.gif',
         'icb'   => 'image2.gif',
@@ -357,7 +361,7 @@ function get_icon($file, $isDir) {
         'xcf'   => 'image2.gif',
         'xpm'   => 'image2.gif',
         'xwd'   => 'image2.gif',
-        
+
         // Microsoft
         'accdb' => 'custom/ms-access.gif',        // MS Access
         'doc'   => 'custom/ms-word.gif',          // MS Word
@@ -368,8 +372,8 @@ function get_icon($file, $isDir) {
         'mdb'   => 'custom/ms-access.gif',        // MS Access
 
         'one'   => 'custom/ms-onenote.gif',       // MS OneNote
-        'onetoc'=> 'custom/ms-onenote.gif',       // MS OneNote
-        'onetoc2'=> 'custom/ms-onenote.gif',      // MS OneNote
+        'onetoc' => 'custom/ms-onenote.gif',       // MS OneNote
+        'onetoc2' => 'custom/ms-onenote.gif',      // MS OneNote
 
         'pot'   => 'custom/ms-powerpoint.gif',    // MS PowerPoint template
         'potx'  => 'custom/ms-powerpoint.gif',    // MS PowerPoint template
@@ -382,7 +386,7 @@ function get_icon($file, $isDir) {
         'pptx'  => 'custom/ms-powerpoint.gif',    // MS PowerPoint
 
         'pub'   => 'custom/ms-publisher.gif',     // MS Publisher
-        'pubxml'=> 'custom/ms-publisher.gif',     // MS Publisher
+        'pubxml' => 'custom/ms-publisher.gif',     // MS Publisher
         'mspub' => 'custom/ms-publisher.gif',     // MS Publisher
 
         'wri'   => 'custom/ms-office.gif',        // MS Write
@@ -403,7 +407,7 @@ function get_icon($file, $isDir) {
         'msg'   => 'custom/ms-outlook.gif',       // MS Outlook
         'pst'   => 'custom/ms-outlook.gif',       // MS Outlook
         'ost'   => 'custom/ms-outlook.gif',       // MS Outlook
-        
+
         // OpenDocument (ODF)
         'odb' => 'odf6odb.png', // database
         'odc' => 'odf6odc.png', // chart
@@ -434,7 +438,7 @@ function get_icon($file, $isDir) {
         'gbc' => 'custom/game.gif', // Game Boy Color
         'gen' => 'custom/game.gif', // Sega Genesis
         'gg'  => 'custom/game.gif', // Game Gear
-        'lynx'=> 'custom/game.gif', // Atari Lynx
+        'lynx' => 'custom/game.gif', // Atari Lynx
         //'md'  => 'custom/game.gif', // Mega Drive
         'n64' => 'custom/game.gif', // Nintendo 64 (little-endian)
         'nds' => 'custom/game.gif', // Nintendo DS
@@ -453,7 +457,7 @@ function get_icon($file, $isDir) {
         'bas'   => 'script.gif',
         'bat'   => 'script.gif',
         'bib'   => 'tex.gif',
-        'bibtex'=> 'tex.gif',
+        'bibtex' => 'tex.gif',
         'c'     => 'c.gif',
         'cfg'   => 'text.gif',
         'conf'  => 'text.gif',
@@ -498,7 +502,7 @@ function get_icon($file, $isDir) {
         'txt'   => 'text.gif',
         'vbs'   => 'script.gif',
         'zsh'   => 'script.gif',
-        
+
         // Structured Data Text
         'atom'  => 'xml.png',
         'csv'   => 'xml.png',
@@ -562,7 +566,7 @@ foreach ($items as $item) {
     if ($item === 'comanche') {
         continue;
     }
-    
+
     if (in_array($item, ['index.php', 'index.htm', 'index.html'], true)) {
         continue;
     }
@@ -587,7 +591,7 @@ foreach ($items as $item) {
 sort($dirs, SORT_NATURAL | SORT_FLAG_CASE);
 sort($files, SORT_NATURAL | SORT_FLAG_CASE);
 
-$tab4="                ";
+$tab4 = "                ";
 
 if ($dir !== '') {
     $parent = dirname($dir);
